@@ -14,7 +14,6 @@ title: "代数体のガロア理論"
 
 前提知識としては、集合論の基本的な記号や用語、ベクトル空間の初歩（特に基底などに関する知識）、行列演算を含めた代数的操作くらいだろうか。
 
-<!--
 本稿の内容は以下の通りである。
 
 1. [体について](#体について)
@@ -23,11 +22,14 @@ title: "代数体のガロア理論"
     1. [拡大次数の連鎖律](拡大次数の連鎖律)
 1. [多項式](多項式)
     1. [多項式の剰余](多項式の剰余)
-    1. [分解体](分解体)
-1. [有限次拡大](有限次拡大)
-    1. [代入](代入)
-    1. [代数体は単拡大である](代数体は単拡大である)
+    1. [剰余体と分解体](剰余体と分解体)
+    1. [有限次拡大と最小多項式](有限次拡大と最小多項式)
+1. [代数体](代数体)
 1. [共役と自己同型](#共役と自己同型)
+
+<!--
+
+1. [代数体のガロア理論](#代数体のガロア理論)
 1. [ガロア対応](#ガロア対応)
 1. [ガロア群の計算例](#ガロア群の計算例)
 
@@ -226,7 +228,7 @@ $$
 
 と表せる式を$k$上の**多項式**と呼び、その全体を$k\lbrack x \rbrack$で表す。特に$a_{n}\neq 0$のとき$n$を多項式の**次数**と呼び、多項式$f$について$\mathrm{deg}( f )$などと表す。ゼロ多項式の次数については$\mathrm{deg}( 0 )=-\infty$と定めておこう。
 
-多項式同士も足し算や引き算、掛け算ができることに注意する。（このような構造を数学では環と呼ぶ。環については別の機会に譲る。）ただし整数全体$\mathbb{Z}$と同じように、多項式同士の割り算を多項式の範囲で行うことはできない。もっとも剰算、つまり余りを考えることはできる。
+多項式同士も足し算や引き算、掛け算ができることに注意する。（このような構造を数学では**環**と呼ぶが、詳しくは別の機会に譲る。）ただし整数全体$\mathbb{Z}$と同じように、多項式同士の割り算を多項式の範囲で行うことはできないが、剰余を考えることはできる。
 
 **定理** 多項式$f, g\in k\lbrack x \rbrack$について$g\neq 0$とする。このとき$q, r\in k\lbrack x \rbrack$が存在して
 
@@ -299,13 +301,36 @@ $$
 
 となるが、これはゼロにならない。
 
+### 剰余体と分解体
+
+多項式$f\in k\lbrack x \rbrack, \neq 0$は最高次の係数が$1$のとき**モニック**であるという。また一次以上の多項式$g, h\in k\lbrack x \rbrack$を用いて$f=gh$と表せないとき、$f$は$k\lbrack x \rbrack$において**既約**であるという。
+
+多項式は次数を持つので、任意の多項式は有限個の既約多項式の積で表せることに注意する。
+
+**命題** 多項式の既約多項式による剰余全体は体となる。
+
+（証明）$p\in k\lbrack x \rbrack$を既約多項式とする。$f\in k\lbrack x \rbrack, \neq 0$は$\mathrm{deg}( f )\lt\mathrm{deg}( p )$を満たすとする。このとき$p$の$f$による剰余を考えると$p=qf+r$と表せるが、$p$は既約だから$r\neq 0$である。$r\in k$なら$f$は可逆となるから、帰納的に$r$は可逆としてよい。つまり$s, t\in k\lbrack x \rbrack$が存在して$sr=tp+1$と表せる。
+
+$$
+sp=sqf+sr=sqf+tp+1 \Longleftrightarrow ( s-t )p=sqf+1
+$$
+
+だから$f$も可逆となる。$\square$
+
+上記の体、つまり既約多項式$p\in k\lbrack x \rbrack$による剰余全体を$k\lbrack x \rbrack/( p )$と書き、$p$による**剰余体**と呼ぶ。特に$k\lbrack x \rbrack/( p )$は$k$の拡大体である。
+
+**補題** $f\in k\lbrack x \rbrack$を$\mathrm{deg}( f )=n\gt 0$なる多項式とする。このときある体の拡大$K/k$が存在して、$f$は$K\lbrack x \rbrack$において$n$個の一次多項式の積として表せる。
+
+（証明）$n$に関する帰納法で示す。$n=1$のとき、$f=ax+b$だから、$x=-\frac{b}{a}\in k$が解である。故に$K=k$とすればよい。$n\gt 0$のとき$f=gp$と既約多項式$p\in k\lbrack x \rbrack$と分解できる。体$E=k\lbrack x \rbrack/( p )$を考えれば$E/k$は体の拡大であって、剰余としての$x\in E$は多項式$p$の根である。これを改めて$\xi$と書き、不定元を$y$とすれば$p$は$E\lbrack y \rbrack$において$( y-\xi )$を因子に持つ。特に$f=( y-\xi )g$と分解できるので、帰納的に$1$次多項式の積で表せる体の拡大$K/k$が存在する。$\square$
+
+多項式について、その根を全て含む体を**分解体**と呼ぶ。先の補題は、任意の多項式が分解体を持つことを述べている。
 
 
-### 有限次拡大
 
-多項式と関連して有限次拡大の性質を見ていくが、その前に少し用語を定義しておく。
 
-ゼロでない多項式$f\in k\lbrack x \rbrack, \neq 0$は最高次の係数が$1$のとき**モニック**であるという。また一次以上の多項式$g, h\in k\lbrack x \rbrack$を用いて$f=gh$と表せないとき、$f$は$k\lbrack x \rbrack$において**既約**であるという。
+### 有限次拡大と最小多項式
+
+多項式と関連して有限次拡大の性質を見ていく。
 
 **命題** $K/k$は有限次拡大とする。このとき任意の$\alpha\in K$は、ある$k$上の多項式$f\in k\lbrack x \rbrack$の根である。
 
@@ -325,10 +350,6 @@ $$
 
 $\alpha$を根とする多項式のうち、次数が最小でモニックなものを$\alpha$の$k$上の**最小多項式**と呼ぶ。
 
-**例** $\mathbb{Q}( \sqrt{2} )/\mathbb{Q}$において$x^{2}-2$は$\sqrt{2}$の最小多項式である。
-
-**例** $\mathbb{Q}( \sqrt[3]{2} )/\mathbb{Q}$において$x^{3}-2$は$\sqrt[3]{2}$の最小多項式である。
-
 **命題** 最小多項式は既約である。
 
 （証明）有限次拡大$K/k$において、$\alpha\in K$の最小多項式を$f\in k\lbrack x \rbrack$とする。もし一次以上の多項式$g, h\in k\lbrack x \rbrack$に対し$f=gh$と書けるなら、
@@ -345,23 +366,161 @@ $$
 
 上記の2つの命題より最小多項式の判定法が得られる。すなわち、既約かつモニックな多項式の根は、その根の最小多項式である。
 
+**例** $\mathbb{Q}( \sqrt{2} )/\mathbb{Q}$において$x^{2}-2$は$\sqrt{2}$の最小多項式である。実際$( \sqrt{2} )^{2}-2=0$であり、$\sqrt{2}\notin\mathbb{Q}$より既約である。
 
-<!--
+**例** $\mathbb{Q}( \sqrt[3]{2} )/\mathbb{Q}$において$x^{3}-2$は$\sqrt[3]{2}$の最小多項式である。これも$\sqrt[3]{2}\notin\mathbb{Q}$より既約性が分かる。
+
+拡大$K/k$において、体$k$を含み、$S\subset K$を含む最小の体を$k( S )$などと表す。特に$S=\lbrace \alpha \rbrace$が唯一つの元であるとき$k( \alpha )$と書き$k( \alpha )/k$は**単拡大**と呼ぶ。
+
+有限次単拡大は、ベクトル空間としての基底が生成元の冪で取れるという性質を持つ。
+
+**命題** $K/k$は有限次拡大とする。$\alpha\in K$について最小多項式の次数を$n$とすると
+
+$$
+k( \alpha )=k\lbrack \alpha \rbrack=\lbrace a_{0}+a_{1}\alpha+\dotsb+a_{n-1}\alpha^{n-1} : a_{0}, \dotsc, a_{n-1}\in k \rbrace
+$$
+
+が成り立ち
+
+$$
+1, \alpha, \alpha^{2}, \dotsc, \alpha^{n-1}
+$$
+
+はベクトル空間$k( \alpha )$の$k$上の基底となる。従って$n$は$k( \alpha )/k$の拡大次数と一致する。
+
+（証明）$\alpha$の最小多項式を$p$とする。すると$p( \alpha )=0$より$\alpha^{n}$は$1, \alpha, \dotsc, \alpha^{n-1}$の線形結合で書ける。よって
+
+$$
+k\lbrack \alpha \rbrack=\lbrace a_{0}+a_{1}\alpha+\dotsb+a_{n-1}\alpha^{n-1} : a_{0}, \dotsc, a_{n-1}\in k \rbrace
+$$
+
+と表せる。$k\lbrack \alpha \rbrack\subset k( \alpha )$は自明であり、逆も$k\lbrack \alpha \rbrack=k\lbrack x \rbrack/( p )$が剰余体であることから分かる。一次独立性は$p$の最小性より従う。$\square$
 
 
-### 準同型
 
-### 分解体
+## 代数体
 
-### 代数体は単拡大である
+体$K$が$\mathbb{Q}$上の有限次拡大$K/\mathbb{Q}$を定めるとき、$K$を代数体と呼ぶ。
+
+**命題** 最小多項式はその分解体において重根を持たない。
+
+（証明）$p\in \mathbb{Q}\lbrack x \rbrack$を最小多項式、$K$を分解体とする。$p$は$K\lbrack x \rbrack$において一次の積で表せるから
+
+$$
+p( x )=x^{n}+a_{n-1}x^{n-1}+\dotsb+a_{1}x+a_{0}=( x-\alpha_{1} )\dotsm( x-\alpha_{n} )
+$$
+
+と表せる。ただし$a_{0}, \dotsc, a_{n-1}\in k$であり、$\alpha_{1}, \dotsc, \alpha_{n}\in K$である。
+
+$p$が重根$\alpha$を持つとしよう。このとき$K\lbrack x \rbrack$において$p( x )=( x-\alpha )^{2}g( x )$と表せるが、形式的な微分を考えると
+
+$$
+p^{\prime}( x )=nx^{n-1}+( n-1 )a_{n-1}x^{n-2}+\dotsb+a_{1}=2( x-\alpha )g( x )+( x-\alpha )^{2}g^{\prime}( x )
+$$
+
+となる。（ライプニッツ則と微分の線型性より従う。）左辺より$p^{\prime}\neq 0$は$\mathbb{Q}\lbrack x \rbrack$の元であり、右辺に$x=\alpha$を代入するとゼロとなることから$p^{\prime}$も$\alpha$を根に持つ。これは$p$の最小性に矛盾する。$\square$
+
+なお一般的な体$k$上では$p^{\prime}\equiv 0$の可能性があり、上記の命題が成り立たないので少し難しくなる。
+
+**定理** 代数体は単拡大である。
+
+（証明）$K/\mathbb{Q}$を有限次拡大とすると、ベクトル空間としての基底は有限個なので、有限集合$S$を用いて$K=\mathbb{Q}( S )$と表せる。従って2つの元で生成される体$K=\mathbb{Q}( \alpha, \beta )$が単拡大であることを示せば、一般の$K$についても帰納的に示せる。
+
+$\alpha, \beta$の最小多項式を$p, q\in\mathbb{Q}\lbrack x \rbrack$とする。ここで積$pq$の分解体$L$を取ると、最小多項式は重根を持たないので、$L\lbrack x \rbrack$において
+
+$$
+\begin{aligned} p( x )&=\prod_{i=1}^{n}( x-\alpha_{i} ),& q( x )&=\prod_{j=1}^{m}( x-\beta_{j} ) \end{aligned}
+$$
+
+と相異な$\alpha_{i}\in L$と相異な$\beta_{j}\in L$で表せる。ここで$\alpha_{1}=\alpha, \beta_{1}=\beta$と仮定して良い。$m=1$のときは$\mathbb{Q}( \alpha, \beta )=\mathbb{Q}( \alpha )$である。$m\ge 2$のときは、$c\in\mathbb{Q}$を
+
+$$
+c\notin\left\lbrace \frac{\alpha-\alpha_{i}}{\beta{j}-\beta} : 1\le i \le n, 2\le j \le m \right\rbrace
+$$
+
+となるように取り、$\gamma=\alpha+c\beta$と置く。明らかに$\mathbb{Q}( \alpha, \beta )\supset \mathbb{Q}( \gamma )$である。$f( x ):=p( \gamma-cx )\in \mathbb{Q}( \gamma )\lbrack x \rbrack$を考える。$f( \beta )=p( \alpha )=0$より、$\beta$は$f$の根である。また$\beta$は$q$の根でもあるが、$f$と$q$の唯一の共通根となる。実際$f$は$\beta_{2}, \dotsc, \beta_{m}$を根に持たない。なぜなら
+
+$$
+f( \beta_{j} )=p( \gamma-c\beta_{j} )=p( \alpha+c( \beta-\beta_{j} ) )=\prod_{i=1}^{n}( ( \alpha-\alpha_{i} )-c( \beta_{j}-\beta ) )
+$$
+
+となるが、$c$は右辺のそれぞれがゼロにならないように取った。$\beta$の$\mathbb{Q}( \gamma )$上の最小多項式を$g$とすると、$g$は共通根が1つしかない$f$と$q$を割り切るので一次であり、$g=x-\beta$と分かる。$g\in \mathbb{Q}( \gamma )$より$\beta\in \mathbb{Q}( \gamma )$となる。故に$\alpha=\gamma-c\beta\in \mathbb{Q}( \gamma )$となり$K=\mathbb{Q}( \gamma )$を得る。つまり$K$は単拡大である。$\square$
+
+**例** $\mathbb{Q}( \sqrt{2}, \sqrt{3} )$が単拡大であることを定理に沿って示してみよう。$\sqrt{2}, \sqrt{3}$の最小多項式は$p=x^{2}-2, q=x^{2}-3$である。よって
+
+$$
+\alpha_{1}=\sqrt{2}, \alpha_{2}=-\sqrt{2}, \beta_{1}=\sqrt{3}, \beta_{2}=-\sqrt{3}
+$$
+
+となる。従って$c\neq 0, \frac{\sqrt{2}}{2\sqrt{3}}$を取ればよいので$c=1$としてよい。つまり$\mathbb{Q}( \sqrt{2}, \sqrt{3} )=\mathbb{Q}( \sqrt{2}+\sqrt{3} )$である。実際$\gamma:=\sqrt{2}+\sqrt{3}$とすると、$\gamma^{2}=5+2\sqrt{6}$より$\sqrt{6}=\frac{1}{2}\gamma^{2}-\frac{5}{2}$であり、
+
+$$
+\sqrt{2}=( 3\sqrt{2}+2\sqrt{3} )-2( \sqrt{2}+\sqrt{3} )=\gamma\sqrt{6}-2\gamma=\frac{1}{2}\gamma^{3}-\frac{9}{2}\gamma
+$$
+
+を得る。$\sqrt{3}$は$\gamma-\sqrt{2}$を計算すればよい。
+
+**問** 一般に$\gamma$から$\alpha, \beta$を求めるアルゴリズムはあるか？
+
 
 
 ## 共役と自己同型
 
+基礎体$k$を共有する拡大$K/k, L/k$に対し、写像$\sigma\colon K\rightarrow L$が$k$**同型**であるとは、準同型（演算をそのまま写す）であって、全単射であり、$k$上で恒等写像のときをいう。特に$K=L$のとき$K$上の**自己同型**と呼び、その全体を$\mathrm{Aut}( K/k )$と表す。自己同型全体は写像の合成で群を為し、一般に元$\alpha\in K$に対する$\sigma\in\mathrm{Aut}( K/k )$の作用を$\alpha^{\sigma}:=\sigma( \alpha )$と表す。
+
+上記の言葉はどうでもよく、以下の性質が重要である。なお写像の合成は$\sigma, \tau\in\mathrm{Aut}( K/k )$に対して、$\sigma$の後に$\tau$を作用させることを$\tau\circ\sigma$あるいは$\sigma\tau$と書く。
+
+- $\alpha, \beta\in K$について$( \alpha\beta )^{\sigma}=\alpha^{\sigma}\beta^{\sigma}$である。
+- $\sigma$について$\sigma^{-1}\in\mathrm{Aut}( K/k )$が存在して$\sigma\circ\sigma^{-1}=\sigma^{-1}\circ\sigma=\mathrm{id}$は恒等写像である。
+- $c\in k$について$c^{\sigma}=c$である。
+- $\alpha\in K$について$\alpha^{\mathrm{id}}=\alpha$である。
+- $\alpha\in K$について$( \alpha^{\sigma} )^{\tau}=\alpha^{\sigma\tau}=\alpha^{( \tau\circ\sigma )}$である。
 
 
 
 
+
+
+
+
+
+
+<!--
+
+
+ここで興味深いことが分かる。
+
+$$
+f( x )=a_{0}+a_{1}x+\dotsb+a_{n-1}x^{n-1}+a_{n}x^{n}\in k\lbrack x \rbrack
+$$
+
+について$\alpha\in K$が$f$の根とする。このとき
+
+$$
+f( \alpha )=a_{0}+a_{1}\alpha+\dotsb+a_{n-1}\alpha^{n-1}+a_{n}\alpha^{n}=0
+$$
+
+であるが、$\sigma\in\mathrm{Aut}( K/k )$について
+
+$$
+f( \alpha )^{\sigma}=a_{0}+a_{1}\alpha^{\sigma}+\dotsb+a_{n-1}( \alpha^{\sigma} )^{n-1}+a_{n}( \alpha^{\sigma} )^{n}=0
+$$
+
+となる。つまり$\alpha^{\sigma}$もまた$f$の根であることが分かる。故に同型は多項式の根の間の置換を定める。
+
+
+
+
+
+
+-->
+
+
+
+
+
+
+<!--
 
 ### 体同型
 
