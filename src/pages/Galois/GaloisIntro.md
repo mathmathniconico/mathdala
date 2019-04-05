@@ -1,6 +1,6 @@
 ---
 path: "/Galois/GaloisIntro"
-date: "2020-04-05"
+date: "2019-04-05"
 title: "代数体のガロア理論"
 ---
 
