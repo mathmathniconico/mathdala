@@ -14,9 +14,15 @@ module.exports = {
                     {
                         resolve: `gatsby-remark-katex`,
                         options: {
-                            // add KaTeX options from https://github.com/KaTeX/KaTeX/blob/master/docs/options.md here
+                            // add options from https://github.com/KaTeX/KaTeX/blob/master/docs/options.md here
                             throwOnError: false,
                             strict: `ignore`,
+                        },
+                    },
+                    {
+                        resolve: `gatsby-remark-autolink-headers`,
+                        options: {
+                            // add options from https://github.com/gatsbyjs/gatsby/tree/master/packages/gatsby-remark-autolink-headers here
                         },
                     },
                 ],
