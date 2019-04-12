@@ -55,16 +55,11 @@ title: "リンク集"
 - [Terence Tao](https://terrytao.wordpress.com/) 膨大な出力に彼の才を見る
 - [石川史郎](http://www.math.keio.ac.jp/~ishikawa/index.html)
 - [伊東由文](http://wwwa.pikara.ne.jp/yoshifumi/)
-- [黒木玄](https://genkuroki.github.io/documents/)
-    - [twitter](https://twitter.com/genkuroki)
-- 須山敦志
-    - [作って遊ぶ機械学習](http://machine-learning.hatenablog.com/)
-    - [twitter](https://twitter.com/sammy_suyama)
+- [黒木玄](https://genkuroki.github.io/documents/) （[twitter](https://twitter.com/genkuroki)）
 - [武部尚志](https://researchmap.jp/takebe/) ロシア日記すこ
 - [谷村省吾](http://www.phys.cs.is.nagoya-u.ac.jp/~tanimura/)
     - [数学・物理通信](http://www.phys.cs.is.nagoya-u.ac.jp/~tanimura/math-phys/index.html)
-- 藤田博司 キューネンの邦訳を手掛けた方
-    - [てなさく世界](http://www.tenasaku.com/tenasaku/)
+- [藤田博司](http://www.tenasaku.com/tenasaku/) キューネンの邦訳を手掛けた方
 - [渡辺澄夫](http://watanabe-www.math.dis.titech.ac.jp/users/swatanab/index-j.html)
 
 
@@ -73,43 +68,33 @@ title: "リンク集"
 
 研究者と分ける意味はあまりないかもしれない。日本語サイト中心。
 - [Pat'sBlog](https://pballew.blogspot.com/) この日何の日
-- [七誌の開発日記](http://7shi.hateblo.jp/)
-    - [twitter](https://twitter.com/7shi) 七誌氏
-- [adhara's blog](https://twitter.com/subarusatosi)
-    - [twitter](https://twitter.com/adhara_mathphys) adhara_mathphys氏
-- [arith blog](https://arith.hatenablog.com/)
-    - [マストドン](https://mathtod.online/@miyu) miyu氏
-- [hiroyukikojimaの日記](hiroyukikojimaの日記)
-    - [hiroyukikojima’s blog](https://hiroyukikojima.hatenablog.com/) 移行先
+- [七誌の開発日記](http://7shi.hateblo.jp/) （[twitter](https://twitter.com/7shi)）
+- [adhara's blog](https://twitter.com/subarusatosi) （[twitter](https://twitter.com/adhara_mathphys)）
+- [arith blog](https://arith.hatenablog.com/) （[マストドン](https://mathtod.online/@miyu) ）
+- [hiroyukikojima’s blog](https://hiroyukikojima.hatenablog.com/)
 - [Ikuro's Home Page](http://ikuro-kotaro.sakura.ne.jp/) コラムの話題が豊富。ただ参照性が皆無。
 - [INTEGERS](http://integers.hatenablog.com/archive) 整数論の記事が沢山あって楽しい
-- [iso.2022](http://iso.2022.jp/) 決定不能問題ギャラリーは貴重。勉強してちゃんと読みたい。
-    - [twitter](https://twitter.com/waidotto)
-    - [マストドン](https://mathtod.online/@waidotto) y.氏
+- [iso.2022](http://iso.2022.jp/) 決定不能問題ギャラリーは貴重。勉強してちゃんと読みたい。（[マストドン](https://mathtod.online/@waidotto)）
 - [Line Segment](https://linesegment.web.fc2.com/) 著作権切れの数学書などを掲載
 - [The Dark Side of Forcing](https://forcing.nagoya/)
 - [tsujimotterのノートブック](http://tsujimotter.hatenablog.com/) 日曜数学者の人
 - [壱大整域](http://alg-d.com/)
     - [圏論](http://alg-d.com/math/kan_extension/) 圏論界隈のde facto standardと聞いた
-- [記号の世界ゟ](http://tetobourbaki.hatenablog.com/)
-    - [twitter](https://twitter.com/lovebourbaki) Loveブルバキ氏
+- [記号の世界ゟ](http://tetobourbaki.hatenablog.com/) （[twitter](https://twitter.com/lovebourbaki)）
 - [私的数学塾](http://shochandas.xsrv.jp/) 備忘録が面白い
-- [数学で行こう](https://go-with-math.blogspot.com/)
-    - [twitter](https://twitter.com/MathTanaka2017)
-    - [マストドン](https://mathtod.online/@tanaka2017) タナカ氏
+- [数学で行こう](https://go-with-math.blogspot.com/) （[マストドン](https://mathtod.online/@tanaka2017)）
 - [数学の犬](http://eldesh.yukishigure.com/) 代数トポロジーのノート集
 - [数学メモ帳](http://troy-sugaku-t.hatenablog.com/)
 - [大学の理工系の講義ノートPDFまとめ](https://language-and-engineering.hatenablog.jp/entry/20140620/PDFLectureNotesOnUniversity)
+- [作って遊ぶ機械学習](http://machine-learning.hatenablog.com/) （[twitter](https://twitter.com/sammy_suyama)）
 - [トポロジーいろいろ](https://yamyamtopo.wordpress.com/)
 - [とね日記](https://blog.goo.ne.jp/ktonegaw)
-- [中嶋 慧のページ](http://physnakajima.html.xdomain.jp/)
-    - [twitter](https://twitter.com/subarusatosi) 中嶋慧氏
+- [中嶋 慧のページ](http://physnakajima.html.xdomain.jp/) （[twitter](https://twitter.com/subarusatosi)）
 - [はじまりはKan拡張](https://infinitytopos.wordpress.com/) 
 - [物理とか](https://whyitsso.net/index.html)
 - [星の本棚](http://yagami12.hatenablog.com/)
 - [もちもちモチーフ](https://asuka-math.amebaownd.com/)
-- [龍孫江の数学日誌](http://blog.livedoor.jp/ron1827-algebras/)
-    - [YouTube](https://www.youtube.com/channel/UCO34XpHxdG8P2n5aTPXSaZQ)
+- [龍孫江の数学日誌](http://blog.livedoor.jp/ron1827-algebras/) （[YouTube](https://www.youtube.com/channel/UCO34XpHxdG8P2n5aTPXSaZQ)）
 
 
 ## ソフトウェア
