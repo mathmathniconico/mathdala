@@ -71,6 +71,7 @@ title: "リンク集"
 - [七誌の開発日記](http://7shi.hateblo.jp/) （[twitter](https://twitter.com/7shi)）
 - [adhara's blog](https://twitter.com/subarusatosi) （[twitter](https://twitter.com/adhara_mathphys)）
 - [arith blog](https://arith.hatenablog.com/) （[マストドン](https://mathtod.online/@miyu) ）
+- [confessione](https://pechod-dynol.amebaownd.com/) （[twitter](https://twitter.com/Pechod_dynol)）
 - [hiroyukikojima’s blog](https://hiroyukikojima.hatenablog.com/)
 - [Ikuro's Home Page](http://ikuro-kotaro.sakura.ne.jp/) コラムの話題が豊富。ただ参照性が皆無。
 - [INTEGERS](http://integers.hatenablog.com/archive) 整数論の記事が沢山あって楽しい
@@ -92,9 +93,11 @@ title: "リンク集"
 - [中嶋 慧のページ](http://physnakajima.html.xdomain.jp/) （[twitter](https://twitter.com/subarusatosi)）
 - [はじまりはKan拡張](https://infinitytopos.wordpress.com/) 
 - [物理とか](https://whyitsso.net/index.html)
+- [物理のページ](http://physnd.html.xdomain.jp/top.html)
 - [星の本棚](http://yagami12.hatenablog.com/)
 - [もちもちモチーフ](https://asuka-math.amebaownd.com/)
 - [龍孫江の数学日誌](http://blog.livedoor.jp/ron1827-algebras/) （[YouTube](https://www.youtube.com/channel/UCO34XpHxdG8P2n5aTPXSaZQ)）
+
 
 
 ## ソフトウェア
