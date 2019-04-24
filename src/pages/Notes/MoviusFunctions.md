@@ -90,7 +90,7 @@ $$
 
 と計算される。
 
-次に$P^{\mathfrak{dual}}$におけるconvolution積を観察する。$\phi=( \phi_{p} ), \psi=( \psi_{p} )\in P^{\mathfrak{dual}}$に対して
+次に$P^{\mathrm{dual}}$におけるconvolution積を観察する。$\phi=( \phi_{p} ), \psi=( \psi_{p} )\in P^{\mathrm{dual}}$に対して
 
 $$
 \begin{aligned} ( \phi\ast\psi )( d\vert n )&=\sum_{d\vert m\vert n}\phi( d\vert m )\psi( m\vert n ) \\ &=\sum_{k_{1}\le l_{1}\le n_{1}}\dotsb\sum_{k_{r}\le l_{r}\le n_{r}}\phi_{p_{1}}( e_{k_{1}, l_{1}} )\dotsm\phi_{p_{r}}( e_{k_{r}, l_{r}} )\psi_{p_{1}}( e_{l_{1}, n_{1}} )\dotsm\psi_{p_{r}}( e_{l_{r}, n_{r}} ) \\ &= \left( \sum_{k_{1}\le l_{1}\le n_{1}}\phi_{p_{1}}( e_{k_{1}, l_{1}} )\psi_{p_{1}}( e_{l_{1}, n_{1}} ) \right)\dotsm\left( \sum_{k_{r}\le l_{r}\le n_{r}}\phi_{p_{r}}( e_{k_{r}, l_{r}} )\psi_{p_{r}}( e_{l_{r}, n_{r}} ) \right) \\ &= ( \phi_{p_{1}}\ast\psi_{p_{1}} )( e_{k_{1}, n_{1}} )\dotsm( \phi_{p_{r}}\ast\psi_{p_{r}} )( e_{k_{r}, n_{r}} ) \end{aligned}
