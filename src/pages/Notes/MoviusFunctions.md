@@ -110,7 +110,7 @@ $$
 ( \mathfrak{z}_{p} )\ast( \mu_{p} )=( \mathfrak{z}_{p}\ast\mu_{p} )=( \varepsilon_{p} )=\varepsilon
 $$
 
-を得る。従って$\mu:=( \mu_{p} )$が$P$のメビウス函数である。そこでconvolution分解を$\bigodot_{p}\mu_{p}^{\prime}$とおく。$\mu_{p}^{\prime}( n )$は$n=p^{}
+を得る。従って$\mu:=( \mu_{p} )$が$P$のメビウス函数である。そこでconvolution分解を$\bigodot_{p}\mu_{p}^{\prime}$とおく。
 
 前節でも述べたように、$P$もまた余代数として大きすぎる。そこでイデアル
 
