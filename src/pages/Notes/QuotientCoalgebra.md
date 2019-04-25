@@ -1,5 +1,6 @@
 ---
 path: "/Notes/QuotientCoalgebra"
+author: "mathmathniconico"
 date: "2019-04-22"
 title: "余代数のイデアルと剰余余代数"
 ---

@@ -1,5 +1,6 @@
 ---
 path: "/Notes/IncidenceAlgebra"
+author: "mathmathniconico"
 date: "2019-04-23"
 title: "Incidence Algebra"
 ---

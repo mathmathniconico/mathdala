@@ -1,5 +1,6 @@
 ---
 path: "/Notes/MobiusFunctions"
+author: "mathmathniconico"
 date: "2019-04-24"
 title: "メビウス函数の計算"
 ---
@@ -104,7 +105,7 @@ $$
 
 とconvolution積による分解が得られる。（厳密には、素数を小さい順に並べてた上で$r$番目までの素数$p( 1 ), \dotsc, p( r )$を固定し、$\phi_{p( 1 )}^{\prime}\ast\dotsm\ast\phi_{p( r )}^{\prime}$の極限として右辺を定義する。）この分解を**convolution分解**と呼ぶ。
 
-以上を利用して$P$のメビウス函数を計算してみよう。$\mathfrak{z}\in P^{\mathrm{dual}}$は全ての$d\vert n$について$\mathfrak{z}( d\vert n )=1$だから、$\mathfrak{z}=( \mathfrak{z}_{p} )$は全ての$k_{i}\le n_{i}$について$\mathfrak{z}_{p}( e_{k_{1}, n_{i}} )=1$となる。$N_{p}^{\mathfrak{dual}}$の単位元を$\varepsilon_{p}$とすれば$\varepsilon=( \varepsilon_{p} )$が$P^{\mathrm{dual}}$の単位元であることに注意すれば、$N_{p}$のメビウス函数を$\mu_{p}$として
+以上を利用して$P$のメビウス函数を計算してみよう。$\mathfrak{z}\in P^{\mathrm{dual}}$は全ての$d\vert n$について$\mathfrak{z}( d\vert n )=1$だから、$\mathfrak{z}=( \mathfrak{z}_{p} )$は全ての$k_{i}\le n_{i}$について$\mathfrak{z}_{p}( e_{k_{1}, n_{i}} )=1$となる。$N_{p}^{\mathrm{dual}}$の単位元を$\varepsilon_{p}$とすれば$\varepsilon=( \varepsilon_{p} )$が$P^{\mathrm{dual}}$の単位元であることに注意すれば、$N_{p}$のメビウス函数を$\mu_{p}$として
 
 $$
 ( \mathfrak{z}_{p} )\ast( \mu_{p} )=( \mathfrak{z}_{p}\ast\mu_{p} )=( \varepsilon_{p} )=\varepsilon

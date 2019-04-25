@@ -12,6 +12,12 @@ module.exports = {
             options: {
                 plugins: [
                     {
+                        resolve: `gatsby-remark-component`,
+                        options: {
+                            // add options
+                        },
+                    },
+                    {
                         resolve: `gatsby-remark-katex`,
                         options: {
                             // add options from https://github.com/KaTeX/KaTeX/blob/master/docs/options.md here
@@ -26,6 +32,12 @@ module.exports = {
                         },
                     },
                 ],
+            },
+        },
+        {
+            resolve: `gatsby-plugin-catch-links`,
+            options: {
+                // add options
             },
         },
     ],

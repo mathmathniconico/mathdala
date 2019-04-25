@@ -1,5 +1,6 @@
 ---
 path: "/Links"
+author: "mathmathniconico"
 date: "2019-04-12"
 title: "リンク集"
 ---

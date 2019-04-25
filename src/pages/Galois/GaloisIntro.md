@@ -1,5 +1,6 @@
 ---
 path: "/Galois/GaloisIntro"
+author: "mathmathniconico"
 date: "2019-04-05"
 title: "代数体のガロア理論"
 ---
