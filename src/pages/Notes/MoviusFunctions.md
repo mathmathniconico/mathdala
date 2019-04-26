@@ -5,15 +5,9 @@ date: "2019-04-24"
 title: "メビウス函数の計算"
 ---
 
-## 半順序集合のincidence coalgebra及びincidence algebra
-
-半順序集合（partially ordered set, poset）は$x\le y$のとき$x\rightarrow y$として（局所有限のとき）小さな圏とみなせる。従ってそのincidence coalgebraやincidence algbebraを定義できる。
-
-
-
 ### メビウス函数の例～自然数の通常の順序～
 
-まず自然数の通常の順序$( \mathbb{N}_{0}, \le )$を考えよう。このincidence coalgebraを$N$とする。簡単のため基底を$i\le j$について$e_{i, j}$と表す。
+まず自然数の通常の順序$( \mathbb{N}_{0}, \le )$を考えよう。このincidence coalgebraを$N$とする。簡単のため、基底を$i\le j$について$e_{i, j}$と表す。
 
 $N$のメビウス函数は定義に沿って計算すると
 

@@ -1,91 +1,62 @@
 ---
 path: "/Notes/IncidenceAlgebra"
 author: "mathmathniconico"
-date: "2019-04-23"
-title: "Incidence Algebra"
+date: "2019-04-26"
+title: "半順序集合のIncidence Algebra"
 ---
 
-## Incidence Coalgebra
+## Rotaの定理
 
-小さい圏とは、以下の4つのデータからなる。
-
-- objectの集合$C_{0}$
-- morphismの集合$C_{1}$
-- 写像$s, t\colon C_{1}\rightarrow C_{0}$及びそのfiber積における合成写像$\circ\colon C_{1}\times_{C_{0}}C_{1}\rightarrow C_{1}$
-- 各objectに対する恒等写像$1\colon C_{0}\rightarrow C_{1}$
-
-ここで合成写像は$C_{1}\times_{C_{0}}C_{1}=\lbrace ( g, f ) : s( g )=t( f ) \rbrace$の元$( g, f )$に対して$g\circ f$を対応させる。つまり$s$は定義域を対応させ、$t$は値域を対応させる。以下$x\in C_{0}$について$1( x )$のことを$1_{x}$と表記する。
-
-またこれらのデータは以下の関係を持つ。ただし$f, g, h\in C_{1}, x, y\in C_{0}$は適切なものを考える。
-
-- $s( g\circ f )=s( f ), t( g\circ f )=t( g )$
-- $s( 1_{x} )=x, t( 1_{x} )=x$
-- $( h\circ g )\circ f=h\circ( g\circ f )$
-- $1_{y}\circ f=f=f\circ 1_{x}$
-
-このとき上記の組を**小さい圏**（small category）と呼ぶ。
-
-可換環$R$について、morphismを基底とする$R$上の自由加群$C$を考える。ここに写像$\Delta\colon C\rightarrow C\otimes C$及び$\varepsilon\colon C\rightarrow R$を、$f\in C_{0}$に対して線型に以下で定める。
+$( P_{0}, \le )$を半順序集合（partially ordered set, poset）とする。
 
 $$
-\begin{aligned} \Delta( f )&:=\sum_{h\circ g=f}g\otimes f, & \varepsilon( f )&:=\left\lbrace\begin{aligned} &1 & &\text{if }f=1_{x} \\ &0 & &\text{otherwise} \end{aligned}\right. \end{aligned}
+P_{1}:=\lbrace \lbrack x, y \rbrack : x, y\in P_{0}, x\le y \rbrace
 $$
 
-ここで$\Delta$がwell-definedであるためには、任意の$f$で$h\circ g=f$なる$( h, g )$は有限個でなければならない。小さい圏がこの条件を満たすとき、**局所有限**（locally finite）と言う。
-
-**命題**
-局所有限な小さい圏において、上記の$( C, \Delta, \varepsilon )$は余代数となる。
-
-（証明）余代数の定義を検証すればよい。$\mathrm{id}\otimes\Delta\circ\Delta=\Delta\otimes\mathrm{id}\circ\Delta$は次のように示される。
+と置けば、
 
 $$
-\mathrm{id}\otimes\Delta\circ\Delta( f )=\mathrm{id}\otimes\Delta\left( \sum_{h\circ g=f}g\otimes h \right)=\sum_{h\circ g=f}g\otimes\left( \sum_{v\circ u=h} u\otimes v \right)=\sum_{v\circ u\circ g=f}g\otimes u\otimes v
+\begin{aligned} s\lbrack x, y \rbrack&=x, & t\lbrack x, y \rbrack&=y, & \lbrack y, z \rbrack\circ\lbrack x, y \rbrack&=\lbrack x, z \rbrack \end{aligned}
 $$
 
-より、右辺は$v\circ u\circ g=f$なる三つ組$( v, u, g )$に関する和である。$\Delta\otimes\mathrm{id}\circ\Delta$も同様なので等しい。
+及び$1_{x}=( x, x )$で$( P_{0}, P_{1}, s, t, \circ, 1 )$は小さな圏となる。
 
-また$\mathrm{id}\otimes\varepsilon\circ\Delta( f )=f\otimes 1$は以下のように示される。$1_{x}\circ g=f$なら$g=1_{x}\circ g=f$より$x=t( f )$であるから、
+特に半順序集合が局所有限（$x\le z\le y$なる$z$は有限個）のとき、この小さな圏も局所有限であり、したがってincidence coalgebra $P$やincidence algebra $P^{\mathrm{dual}}$を定義できる。
 
-$$
-\mathrm{id}\otimes\varepsilon\circ\Delta( f )=\mathrm{id}\otimes\varepsilon\left( \sum_{h\circ g=f}g\otimes h \right)=\sum_{h\circ g=f}g\otimes\varepsilon( h )=f\otimes\varepsilon( 1_{t( f )} )=f\otimes 1
-$$
+半順序集合のincidence algebraで重要な性質は次の命題だろう。以下$\vert x, y \vert$で$\lbrace z : x\le z \le y \rbrace$の元の個数を表す。
 
-が従う。$\varepsilon\circ\mathrm{id}\circ\Delta( f )=1\otimes f$も同様である。$\square$
+**命題** 以下が成り立つ。
 
-上記の余代数$( C, \Delta, \varepsilon )$を**incidence coalgebra**と呼ぶ。隣接余代数という翻訳もあるが、馴染みが薄いので英語で表記する。
+- $\vert x, x \vert=1$である。
+- $x\le z\lt y$のとき$\vert x, z \vert\lt\vert x, y \vert$が成り立つ。
+- $x\lt z\le y$のとき$\vert z, y \vert\lt\vert x, y \vert$が成り立つ。
 
+（証明）一つ目は$x\le y\le x$なら$y=x$より明らか。二つ目も$x\le t\le z$なら$x\le t\le y$だが$t\le z\lt y$より$t\neq y$となることから分かる。$\square$
 
+**定理**（Rotaの定理） $\phi\in P^{\mathrm{dual}}$について以下は同値である。
 
-## Incidence Algebra
+- $\phi$は可逆である。つまりある$\psi\in P^{\mathrm{dual}}$が存在して$\phi\ast\psi=\psi\ast\phi=\varepsilon$が成り立つ。
+- 任意の$x\in P_{0}$について$\phi( \lbrack x, x \rbrack )\in R$は可逆である。
 
-一般に余代数と代数のpairingを考えることでconvolution代数を定義できるが、特に代数として$R$自身をとることで、余代数$C$の双対代数（dual algebra of coalgebra）を考えることができる。つまり$\mathrm{Hom}_{R}( C, R )=:C^{\mathrm{dual}}$が次のconvolution積で代数となる。$\phi, \psi\in C^{\mathrm{dual}}$のconvolution積は、$f\in C_{0}$に対して線型に
-
-$$
-( \phi\ast\psi )( f ):=\sum_{h\circ g=f}\phi( g )\psi( h )
-$$
-
-で定義される。単位元は$\varepsilon$である。特にincidence coalgebraの双対代数を**incidence algebra**と呼ぶ。
-
-Incidence algebraにおける可逆性は、「対角成分」である$1_{x}$の値の可逆性より従う。
-
-**定理**（Rotaの定理） $( C^{\mathrm{dual}}, \ast, \varepsilon )$をincidence algebraとする。$\phi\in C^{\mathrm{dual}}$について以下は同値である。
-
-- $\phi$は可逆である。つまりある$\psi\in C^{\mathrm{dual}}$が存在して$\phi\ast\psi=\psi\ast\phi=\varepsilon$が成り立つ。
-- 任意の$x\in C_{0}$について$\phi( 1_{x} )\in R$は可逆である。
-
-（証明）$\phi$が可逆なら$\phi( 1_{x} )\psi( 1_{x} )=\varepsilon( 1_{x} )=1$より$\phi( 1_{x} )$は可逆である。逆は$\psi$を具体的に構成することで得られる。まず$\psi( 1_{x} ):=\phi( 1_{x} )^{-1}$と置く。$f\neq 1_{x}$に対しては$\lbrace ( h, g ) : h\circ g=f, h\neq f \rbrace$の元の個数に関して帰納的に定義する。
+（証明）$\phi$が可逆なら
 
 $$
-\varepsilon( f )=( \phi\ast\psi )( f )=\sum_{h\circ g=f}\phi( g )\psi( h )
+\phi\ast\psi( \lbrack x, x \rbrack )=\phi( \lbrack x, x \rbrack )\psi( \lbrack x, x \rbrack )=\varepsilon( \lbrack x, x \rbrack )=1
+$$
+
+より$\phi( \lbrack x, x \rbrack )$は可逆である。逆は$\psi$を具体的に構成することで得られる。まず$\psi( \lbrack x, x \rbrack ):=\phi( \lbrack x, x \rbrack )^{-1}$と置く。$x\lt y$に対しては$\vert x, y \vert$に関して帰納的に定義する。
+
+$$
+\varepsilon( \lbrack x, y \rbrack )=( \phi\ast\psi )( \lbrack x, y \rbrack )=\sum_{x\le z\le y}\phi( \lbrack x, z \rbrack )\psi( \lbrack z, y \rbrack )
 $$
 
 が成り立てばよいので、
 
 $$
-\psi( f ):=-\phi( 1_{s( f )} )^{-1}\sum_{h\circ g=f, h\neq f }\phi( g )\psi( h )
+\psi( \lbrack x, y \rbrack ):=-\phi( \lbrack x, x \rbrack )^{-1}\sum_{x\le z\lt y}\phi( \lbrack x, z \rbrack )\psi( \lbrack z, y \rbrack )
 $$
 
-と置けばよい。これで$\phi$の右側逆元の存在が言えたが、同様に左側逆元の存在も言える。両者が一致することは、良く知られているように
+と置けばよい。これで$\phi$の右側逆元$\psi_{R}$の存在が言えたが、同様に左側逆元$\psi_{R}$の存在も言える。両者が一致することは、良く知られているように
 
 $$
 \psi_{L}=\psi_{L}\ast\varepsilon=\psi_{L}\ast\phi\ast\psi_{R}=\varepsilon\ast\psi_{R}=\psi_{R}
@@ -93,7 +64,11 @@ $$
 
 より従う。$\square$
 
-重要な例として任意の$f\in C_{0}$で$\mathfrak{z}( f )=1$を取る函数$\mathfrak{z}$は可逆となる。この逆元$\mu:=\mathfrak{z}^{-1}\in C^{\mathrm{dual}}$を$C$の**メビウス函数**と呼ぶ。このときいわゆる**メビウス反転**
+
+
+## メビウス函数
+
+Rotaの定理の応用として任意の$\lbrack x, y \rbrack\in P_{1}$で$\mathfrak{z}( \lbrack x, y \rbrack )=1$を取る写像$\mathfrak{z}$は可逆となる。この逆元$\mu:=\mathfrak{z}^{-1}\in P^{\mathrm{dual}}$を$P$の**メビウス函数**と呼ぶ。このときいわゆる**メビウス反転**
 
 $$
 \Phi=\phi\ast\mathfrak{z}\Longrightarrow \phi=\Phi\ast\mu
@@ -102,28 +77,12 @@ $$
 が成り立つ。つまり
 
 $$
-\Phi( f )=\sum_{h\circ g=f}\phi( g )\Longrightarrow\phi( f )=\sum_{h\circ g=f}\Phi( g )\mu( h )
+\Phi( f )=\sum_{x\le z\le y}\phi( \lbrack x, z \rbrack )\Longrightarrow\phi( f )=\sum_{x\le z\le y}\Phi( \lbrack x, z \rbrack )\mu( \lbrack z, y \rbrack )
 $$
 
 が成り立つ。
 
-
-
-## Incidence Coalgebraの剰余余代数について
-
-Incidence coalgebraの剰余余代数に、上記の議論を拡張する。$( C, \Delta, \varepsilon )$を余代数、$N\subset C$をイデアルとする。$R$加群の系列
-
-$$
-0\rightarrow N\rightarrow C\rightarrow C/N\rightarrow 0
-$$
-
-は完全なので、双対を取ると
-
-$$
-( 0\leftarrow )N^{\mathrm{dual}}\leftarrow C^{\mathrm{dual}}\leftarrow ( C/N )^{\mathrm{dual}}\leftarrow 0
-$$
-
-は完全になる。特に$( C/N )^{\mathrm{dual}}$は$C^{\mathrm{dual}}$に自然に埋め込める。よって$\phi$が$N$上で恒等的にゼロなら、それは$( C/N )^{\mathrm{dual}}$の元とみなせる。よって$\mu$が$N$上で恒等的にゼロとなるとき、$\mu\in( C/N )^{\mathrm{dual}}$を$C/N$のメビウス函数と呼ぶ。
+更に$N$を$P$のイデアルとして、$\mu$は$N$上で恒等的にゼロとする。このとき$\mu\in( C/N )^{\mathrm{dual}}$と見なせるが、これを$C/N$のメビウス函数と呼ぶ。
 
 - $\varepsilon( N )=0$より$1_{x}\notin N$である。
 - $\mathfrak{z}$は$( C/N )^{\mathrm{dual}}$の元ではない。
@@ -136,7 +95,4 @@ $$
 
 ## 補足
 
-Khripchenko, Novikovは上記のアナロジーでfinitary incidence algebraを導入している。こちらは$C$に局所有限性を仮定せず、代わりに$C^{\mathrm{dual}}$にpath finiteness（これは私の造語）を仮定する。つまり$s( f ), t( f )$を結ぶpathに含まれる射$g$について$\phi( g )\neq 0$となるものが有限個であるとする。（論文ではposetに対して論じているのでこの翻訳が正しいかは要検証。）局所有限性が無いので$C$そのものは余代数の構造を持たないが、$C^{\mathrm{dual}}$の方は代数構造を持つという主張だ。
-
-一般に代数$A$に対してその双対余代数$A^{\mathrm{dual}}$を定義できる場合がある。しかし恐らくfinaitary incidence algebraに対して定義できる場合は、それがincidence algebraである必要があると思われる。そしてその双対余代数は、元々の余代数と同型であるだろう。
-
+Rotaの定理は一般には成り立たない。というのも小さな圏がループを持っていたり、自分自身への射が複数存在すると帰納法が働かないので逆元を構成できない。命題で挙げた条件をうまい具合に翻訳できれば、もう少し良い形のRotaの定理が示せるだろうけどよく分からない。
