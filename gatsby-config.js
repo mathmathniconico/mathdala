@@ -1,6 +1,12 @@
 module.exports = {
     plugins: [
         {
+            resolve: `gatsby-plugin-react-helmet`,
+            options: {
+                // add options
+            },
+        },
+        {
             resolve: `gatsby-source-filesystem`,
             options: {
                 path: `${__dirname}/src/pages/`,
@@ -43,7 +49,7 @@ module.exports = {
         {
             resolve: `gatsby-plugin-web-font-loader`,
             options: {
-
+                // add options
             },
         },
     ],

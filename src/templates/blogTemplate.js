@@ -1,7 +1,7 @@
 import React from 'react'
 import { graphql } from 'gatsby'
 import rehypeReact from "rehype-react"
-import Header from "../components/header"
+import Layout from "../components/layout"
 import Docinfo from "../components/docinfo"
 
 import 'katex/dist/katex.min.css'
@@ -17,16 +17,15 @@ export default function Template({
     const { markdownRemark } = data // data.markdownRemark holds our post data.
     const { frontmatter, htmlAst } = markdownRemark
     return (
-        <div>
-        <Header></Header>
-        <div className="blog-post-container">
-            <div className="blog-post">
-                <h1>{frontmatter.title}</h1>
-                <div className="docinfo" align="right"><Docinfo author={frontmatter.author} date={frontmatter.date} path={frontmatter.path}/></div>
-                <div className="blog-post-content">{renderAst(htmlAst)}</div>
+        <Layout>
+            <div className="blog-post-container">
+                <div className="blog-post">
+                    <h1>{frontmatter.title}</h1>
+                    <div className="docinfo" align="right"><Docinfo author={frontmatter.author} date={frontmatter.date} path={frontmatter.path}/></div>
+                    <div className="blog-post-content">{renderAst(htmlAst)}</div>
+                </div>
             </div>
-        </div>
-        </div>
+        </Layout>
     )
 }
 
