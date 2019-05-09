@@ -1,7 +1,7 @@
 ---
 path: "/Links"
 author: "mathmathniconico"
-date: "2019-04-12"
+date: "2019-05-09"
 title: "リンク集"
 ---
 
@@ -80,6 +80,7 @@ title: "リンク集"
 - [Line Segment](https://linesegment.web.fc2.com/) 著作権切れの数学書などを掲載
 - [The Dark Side of Forcing](https://forcing.nagoya/)
 - [tsujimotterのノートブック](http://tsujimotter.hatenablog.com/) 日曜数学者の人
+- [あもんノート](https://amonphys.web.fc2.com/) 物理学のノート集
 - [壱大整域](http://alg-d.com/)
     - [圏論](http://alg-d.com/math/kan_extension/) 圏論界隈のde facto standardと聞いた
 - [記号の世界ゟ](http://tetobourbaki.hatenablog.com/) （[twitter](https://twitter.com/lovebourbaki)）
@@ -93,8 +94,8 @@ title: "リンク集"
 - [とね日記](https://blog.goo.ne.jp/ktonegaw)
 - [中嶋 慧のページ](http://physnakajima.html.xdomain.jp/) （[twitter](https://twitter.com/subarusatosi)）
 - [はじまりはKan拡張](https://infinitytopos.wordpress.com/) 
-- [物理とか](https://whyitsso.net/index.html)
-- [物理のページ](http://physnd.html.xdomain.jp/top.html)
+- [物理とか](https://whyitsso.net/index.html) 物理学のノート集
+- [物理のページ](http://physnd.html.xdomain.jp/top.html) 物理学のノート集
 - [星の本棚](http://yagami12.hatenablog.com/)
 - [もちもちモチーフ](https://asuka-math.amebaownd.com/)
 - [龍孫江の数学日誌](http://blog.livedoor.jp/ron1827-algebras/) （[YouTube](https://www.youtube.com/channel/UCO34XpHxdG8P2n5aTPXSaZQ)）
@@ -110,6 +111,7 @@ title: "リンク集"
 
 - [Statistics with Julia](https://github.com/h-Klok/StatsWithJuliaBook)
 - ["Operating Systems: Three Easy Pieces"の日本語翻訳](https://github.com/syarochan/Operating-Systems-Three-Easy-Pieces-in-japanese)
+- [江添亮のC++入門](https://ezoeryou.github.io/cpp-intro/)
 
 
 

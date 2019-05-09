@@ -1,9 +1,11 @@
 ---
 path: "/Notes"
 author: "mathmathniconico"
-date: "2019-04-25"
+date: "2019-05-09"
 title: "ノート"
 ---
+
+余代数など
 
 - 代数と余代数
 - 余代数の基礎
@@ -15,3 +17,7 @@ title: "ノート"
     - 半順序集合より定まるincidence algebraについてRotaの定理を示す。
 - [メビウス函数の計算](/Notes/MobiusFunctions)
     - 自然数の二つの順序についてメビウス函数を具体的に計算して、リーマン・ゼータ函数のオイラー積表示の（擬）証明を与える。
+
+クリフォード代数
+- [組合せ論的クリフォード代数](/Notes/CombinatorialCliffordAlgebra)
+- [クリフォード代数の例](/Notes/CliffordAlgebraExamples)
