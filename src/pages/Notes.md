@@ -5,6 +5,9 @@ date: "2019-05-09"
 title: "ノート"
 ---
 
+microfacet理論
+- [Microfacet理論](/Notes/Microfacet)
+
 余代数など
 
 - 代数と余代数
