@@ -1,9 +1,14 @@
 ---
 path: "/Articles"
 author: "mathmathniconico"
-date: "2019-04-25"
+date: "2019-06-29"
 title: "記事"
 ---
+
+収束構造
+1. [フィルター](/Convergence/Filter)
+1. [押し出し・引き戻し・直積](/Convergence/PushPullProd)
+1. [フィルター空間](/Convergence/FilterSpace)
 
 代数体のガロア理論
 1. [イントロダクション](/Galois/GaloisIntro)
