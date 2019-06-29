@@ -118,7 +118,7 @@ $$
 
 評価写像$\mathrm{eval}\colon C( X, Y )\times X\rightarrow Y$とは、$f\in C( X, Y ), x\in X$について$\mathrm{eval}( f, x )=f( x )$で定まる写像である。
 
-**命題** $X, Y$をフィルター空間とする。$\mathrm{eval}$を評価写像とする。TFAE
+**補題** $X, Y$をフィルター空間とする。$\mathrm{eval}$を評価写像とする。TFAE
 
 - $C( X, Y )$において$\mathscr{F}\rightarrow f$である。
 - $X$において$\mathscr{A}\rightarrow x$なら、$Y$において$\mathrm{eval}_{\ast}( \mathscr{F}\prod\mathscr{A} )\rightarrow f( x )$である。
@@ -147,4 +147,4 @@ $C( X, Y )\times X$において$\mathscr{H}\rightarrow ( f, x )$とする。射�
 
 （証明）$z\in Z$とする。写像$f_{z}\colon X\rightarrow Y$を$x\in X$に対して$f_{z}( x ):=f( z, x )$で定める。このとき$f_{z}$は連続写像である。実際、$X$において$\mathscr{F}\rightarrow x$とすると、$\langle z \rangle\rightarrow z$より$\mathscr{G}:=\langle z \rangle\prod\mathscr{F}\rightarrow( z, x )$が成り立つ。$f$は連続なので$f_{\ast}\mathscr{G}\rightarrow f( z, x )$となる。$F\in f_{\ast}\mathscr{G}$を取ると、ある$G\in\mathscr{G}$が存在して$f( G )\subset F$が成り立つ。$G\in\mathscr{G}$より、ある$A\in\langle z \rangle, B\in\mathscr{F}$が存在して$A\times B\subset G$が成り立つ。特に$\lbrace z \rbrace\times B\subset G$である。故に$F\supset f( G )\supset f_{z}( B )$を得るので$F\in ( f_{z} )_{\ast}\mathscr{F}$が分かる。以上より$f_{z}$が連続であること、$( f_{z} )_{\ast}\mathscr{F}\rightarrow f( z, x )$が示された。
 
-$\lambda f\colon Z\rightarrow C( X, Y )$は$z\mapsto f_{z}$と定めればよい。これが条件を満たすことは明らかである。一意性も$\lambda f$の定義より明らか。$\square$
+$\lambda f\colon Z\rightarrow C( X, Y )$は$z\mapsto f_{z}$と定めればよい。これが合成の条件を満たすことは明らかである。一意性も$\lambda f$の定義より明らかなので、後は連続性を示せば良い。$Z$において$\mathscr{F}\rightarrow z$とする。$\lambda f_{\ast}\mathscr{F}\rightarrow f_{z}$を示すには、補題より$X$において$\mathscr{A}\rightarrow x$として$\mathrm{eval}_{\ast}( \lambda f_{\ast}\mathscr{F}\prod\mathscr{A} )\rightarrow f_{z}( x )$を示せば良い。しかし$\mathrm{eval}_{\ast}( \lambda f_{\ast}\mathscr{F}\prod\mathscr{A} )=f_{\ast}( \mathscr{F}\prod\mathscr{A} )$なので$f$の連続性より従う。$\square$
