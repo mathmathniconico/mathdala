@@ -19,7 +19,7 @@ title: "フィルター空間"
 
 このとき$( X, \lambda )$で表される組をフィルター空間（filter space）、あるいはフィルター場と呼ぶ。
 
-$\lambda$をフィルターと点の関係とみなして$\mathscr{F}\in\lambda( x )$を$\mathscr{F}\rightarrow x$と表すと便利である。この記法の下でフィルター空間を単に$X$などと表す。
+$\lambda$をフィルターと点の関係とみなして$\mathscr{F}\in\lambda( x )$を$\mathscr{F}\rightarrow x$と表すと便利である。この記法の下でフィルター空間を単に$X$などと表す。$x$を$\mathscr{F}$の極限点（limit point）と呼ぶこともある。
 
 **定義** $X, Y$をフィルター空間、$x\in X$とする。写像$f\colon X\rightarrow Y$は以下を満たすとする。
 
